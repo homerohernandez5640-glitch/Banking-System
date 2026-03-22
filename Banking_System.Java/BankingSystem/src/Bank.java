@@ -137,8 +137,10 @@ double Balance = 0;
 
         try{
 Class.forName("com.mysql.cj.jdbc.Driver");
+            //ADD your localhost and password inside of here
 String dbURL = "jdbc:mysql://localhost:3306/usersdatabase";//Database URL
-Connection dbConnect = DriverManager.getConnection(dbURL, "root", "Hh280001640*");//
+            //Replace these items
+Connection dbConnect = DriverManager.getConnection(dbURL, "root", "Password");//
 sqlSt = dbConnect.createStatement();// Allows us to run SQL. It's like a bridge between Java and SQL
 sqlSt.execute(SQL);//Runs the use SQL
 result = sqlSt.executeQuery(SQL);//Runs the SQL and stores the output in result
